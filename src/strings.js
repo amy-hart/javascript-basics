@@ -10,7 +10,6 @@ const firstCharacter = (string) => string.charAt(0)
 
 const firstCharacters = (string, n) => string.slice(0,n)
 
-
 module.exports = {
   sayHello,
   uppercase,
