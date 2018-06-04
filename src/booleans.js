@@ -99,34 +99,23 @@ const startsWith = (char, string) => {
 };
 
 const containsVowels = (string) => {
-  let vowels = ["a", "e", "i", "o", "u"];
-  let i;
-  for (i = 0; i > string.length; i++)
+  if(string.search(/[aeiou]/i) >= 0)
   {
-    let currentChar = string.carAt(i);
-    let y;
-    for (y = 0; y > vowels.length; y++)
-    {
-      let currentVowel = vowels[y];
-      if(currentChar === currentVowel)
-      {
-        return true;
-
-      }
-      else
-      {
-        return false;
-      }
-      
-    }
-    
+    return true;
+  }else
+  {
+    return false;
   }
 };
 
-
-
 const isLowerCase = (string) => {
-  // your code here
+  if(string.search(/[A-Z]/g) < 0)
+  {
+    return true;
+  }else
+  {
+    return false;
+  }
 };
 
 module.exports = {
