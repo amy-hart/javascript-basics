@@ -30,7 +30,10 @@ const removeNthElement = (index, array) => {
 };
 
 const numbersToStrings = (numbers) => {
-  
+  numbers = numbers.toString();
+  numbers = numbers.split(",");
+  return numbers;
+
 };
 
 const uppercaseWordsInArray = (strings) => {

@@ -99,7 +99,6 @@ const startsWith = (char, string) => {
 };
 
 const containsVowels = (string) => {
-  
   if(string.search(/[aeiou]/i) >= 0)
   {
     return true;
