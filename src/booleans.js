@@ -99,7 +99,7 @@ const startsWith = (char, string) => {
 };
 
 const containsVowels = (string) => {
-  const vowels = ["a", "e", "i", "o", "u"];
+  let vowels = ["a", "e", "i", "o", "u"];
   let i;
   for (i = 0; i > string.length; i++)
   {
