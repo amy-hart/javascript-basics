@@ -37,12 +37,36 @@ const numbersToStrings = (numbers) => {
 };
 
 const uppercaseWordsInArray = (strings) => {
+  
+  jointString = [];
+
+  for(i = 0; i < strings.length; i++)
+  {
+    newString = String(strings[i]).toUpperCase();
+    jointString.push(newString);
+  
+  }
+
+  return jointString;
  
-  return strings;
 };
 
+
 const reverseWordsInArray = (strings) => {
-  // your code here
+
+ jointString = [];
+
+ for(i = 0; i < strings.length; i++)
+  {
+    getString = String(strings[i]);
+    splitWord = getString.split("");
+    reverse = splitWord.reverse();
+    joinUp = reverse.join("");
+    jointString.push(joinUp);
+  }
+
+  return jointString;
+
 };
 
 const onlyEven = (numbers) => {
