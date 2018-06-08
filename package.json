@@ -27,5 +27,7 @@
       "^.+\\.js?$": "babel-jest"
     }
   },
-  "dependencies": {}
+  "dependencies": {
+    "npm": "^6.1.0"
+  }
 }
