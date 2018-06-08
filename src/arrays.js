@@ -70,7 +70,26 @@ const reverseWordsInArray = (strings) => {
 };
 
 const onlyEven = (numbers) => {
-  // your code here
+
+evenNumbers = [];
+
+for(i = 0; i < numbers.length; i++)
+{
+  currentElement = (numbers[i]); 
+  n = (currentElement / 2);
+
+  if(n > 0 && Number.isInteger(n))
+  {
+    console.log((numbers[i]) + ": " + "This number is even");
+    evenNumbers.push(numbers[i]);
+
+  }else
+  {
+    console.log((numbers[i]) + ": " + "This number is odd");
+  }
+}
+  console.log(evenNumbers);
+
 };
 
 const removeNthElement2 = (index, array) => {
