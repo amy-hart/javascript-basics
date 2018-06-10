@@ -1,29 +1,64 @@
 const createPerson = (name, age) => {
-    // your code here
+    const person = { 
+        name: name,
+        age: age
+    }
+
+    return person;
   };
   
   const getName = (object) => {
-    // your code here
+    return object.name;
   };
   
   const getProperty = (property, object) => {
-    // your code here
+    return object[property];
   };
   
+  // This is the one that had an issue
   const hasProperty = (property, object) => {
-    // your code here
+     if(object[property]){
+      return true;
+    }else
+    {
+        return false;
+    }
   };
   
   const isOver65 = (person) => {
-    // your code here
-  };
+    if(person.age > 65)
+    {
+        return true;
+    }else
+    {
+        return false;
+    }
+  }
   
-  const getAges = (people) => {
-    // your code here
-  };
+    const getAges = (people) => {
+        ages = [];
+        const cycleArray = (person) => {
+            ages.push(person.age);
+        };
+        people.filter(cycleArray);  
+
+        return(ages);
+    };
   
   const findByName = (name, people) => {
-    // your code here
+       let missingPerson = {}; 
+
+        const cycleArray = (person) => {
+            console.log(person);
+            if(person.name === name){
+                let missingPerson = person;
+                console.log("MissingPerson A: " + {missingPerson});
+            }
+        };
+      people.filter(cycleArray);
+  
+    console.log("MissingPerson B: " + {missingPerson});
+      
   };
   
   const findHondas = (cars) => {
