@@ -33,24 +33,19 @@ const numbersToStrings = (numbers) => {
   numbers = numbers.toString();
   numbers = numbers.split(",");
   return numbers;
-
 };
 
 const uppercaseWordsInArray = (strings) => {
-  
   jointString = [];
 
   for(i = 0; i < strings.length; i++)
   {
     newString = String(strings[i]).toUpperCase();
     jointString.push(newString);
-  
   }
 
   return jointString;
- 
 };
-
 
 const reverseWordsInArray = (strings) => {
 
@@ -70,46 +65,63 @@ const reverseWordsInArray = (strings) => {
 };
 
 const onlyEven = (numbers) => {
+   newArray = [];    
+    const returnEvenNumbers = (element) => {
+  
+      if(element % 2 === 0){
+        newArray.push(element);
+      }
+    }
+    numbers.filter(returnEvenNumbers);
+    return newArray;
+  };
 
-evenNumbers = [];
-
-for(i = 0; i < numbers.length; i++)
-{
-  currentElement = (numbers[i]); 
-  n = (currentElement / 2);
-
-  if(n > 0 && Number.isInteger(n))
-  {
-    console.log((numbers[i]) + ": " + "This number is even");
-    evenNumbers.push(numbers[i]);
-
-  }else
-  {
-    console.log((numbers[i]) + ": " + "This number is odd");
-  }
-}
-  console.log(evenNumbers);
-
-};
-
-const removeNthElement2 = (index, array) => {
-  // your code here
-};
+  const removeNthElement2 = (index, array) => {
+    newArray = array.slice();	
+    newArray.splice(index,1);
+    return newArray
+  };
 
 const elementsStartingWithAVowel = (strings) => {
-  // your code here
+  newArray = []; 
+  const filterStrings = (element) => {
+   if(/([aeiou])/gi.test(element[0]) === true){
+    newArray.push(element);
+    }
+  }
+  strings.filter(filterStrings);
+  return newArray;
 };
 
 const removeSpaces = (string) => {
-  // your code here
+  return string.replace(/([ ])/g,'');
 };
 
 const sumNumbers = (numbers) => {
-  // your code here
+  return numbers.reduce(function(a,b){return a + b})
 };
 
 const sortByLastLetter = (strings) => {
-  // your code here
+
+  const compare = (a,b) => {
+
+   console.log("Test - " + a + " VS " + b +".");
+    if(a[a.length-1] < b[b.length-1]){
+      //console.log("a less than b");
+      return -1;
+    }
+    else if(a[a.length-1] > b[b.length-1]){
+      return 1;
+      //console.log("a greater than b");
+    }else{
+      console.log("neither condition met");
+    }
+    return 0;
+  }  
+
+  strings.sort(compare);
+
+  return strings;
 };
 
 module.exports = {
