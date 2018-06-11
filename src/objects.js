@@ -77,6 +77,18 @@ const createPerson = (name, age) => {
     // your code here
     // find each age in object, add to ages array
     // add all elements together, then divdie by array.length
+
+    ages =[];
+
+    cycleThrough = people.map(function(person){
+        if(person.age){
+          ages.push(person.age);
+        }
+      });
+
+    sum = ages.reduce(function(a,b){return a + b});
+    return sum / ages.length;
+   
   };
   
   const createTalkingPerson = (name, age) => {
