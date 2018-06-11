@@ -46,19 +46,16 @@ const createPerson = (name, age) => {
     };
   
   const findByName = (name, people) => {
-       let missingPerson = {}; 
+   
+      findPerson = people.find(function(person){
 
-        const cycleArray = (person) => {
-            console.log(person);
-            if(person.name === name){
-                let missingPerson = person;
-                console.log("MissingPerson A: " + {missingPerson});
-            }
-        };
-      people.filter(cycleArray);
-  
-    console.log("MissingPerson B: " + {missingPerson});
-      
+        if(person.name === name){
+          return person;
+        }
+
+      });
+
+      return findPerson;
   };
   
   const findHondas = (cars) => {
