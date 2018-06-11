@@ -59,15 +59,29 @@ const createPerson = (name, age) => {
   };
   
   const findHondas = (cars) => {
-    // your code here
+
+    hondaCars = [];
+
+    filterCars = cars.find(function(car){
+
+        if(car.manufacturer === 'Honda'){
+          hondaCars.push(car);
+        }
+
+      });
+
+      return hondaCars;
   };
   
   const averageAge = (people) => {
     // your code here
+    // find each age in object, add to ages array
+    // add all elements together, then divdie by array.length
   };
   
   const createTalkingPerson = (name, age) => {
     // your code here
+    // use MAP?
   };
   
   module.exports = {
