@@ -1,4 +1,6 @@
 const negate = (a) => {
+  // a is truthy so you don't need to check against true.
+  // also you can return an expression - no need for if / else
   if (a === true) {
     return false;
   }else {
@@ -67,6 +69,7 @@ const isLessThanOrEqualTo = (a, b) => {
 };
 
 const isOdd = (a) => {
+  // use spacing for readability
   if ((a%2) === 0) {
     return false;
   }else{
@@ -83,6 +86,7 @@ const isEven = (a) => {
 };
 
 const isSquare = (a) => {
+  // too much spacing!
   if(Number.isInteger(Math.sqrt(a))  &&  Math.sqrt(a) >= 0) {
     return true;
   }else{
@@ -99,6 +103,7 @@ const startsWith = (char, string) => {
 };
 
 const containsVowels = (string) => {
+  // block syntax
   if(string.search(/[aeiou]/i) >= 0)
   {
     return true;

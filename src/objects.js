@@ -15,7 +15,7 @@ const createPerson = (name, age) => {
     return object[property];
   };
   
-  // This is the one that had an issue
+  // This is the one that had an issue - think this one is passing now...can probably remove this comment
   const hasProperty = (property, object) => {
      if(object[property]){
       return true;
@@ -37,6 +37,8 @@ const createPerson = (name, age) => {
   
     const getAges = (people) => {
         ages = [];
+
+      // no need for declaring the function separately
         const cycleArray = (person) => {
             ages.push(person.age);
         };
@@ -94,6 +96,8 @@ const createPerson = (name, age) => {
   const createTalkingPerson = (name, age) => {
     // your code here
     // use MAP?
+
+    // you want to return an object here using the arguments passed in
   };
   
   module.exports = {
