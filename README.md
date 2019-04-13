@@ -1,6 +1,6 @@
 # JavaScript Basics
 
-The repository contains test cases and empty function definitions which need to be populated to solve the different challenges set in the week 1 walkthrough.
+The repository contains test cases and empty function definitions which need to be populated to solve the different challenges set in the week 1 of my part-time coding bootcamp at Manchester Codes.
 
 ## Getting started
 
