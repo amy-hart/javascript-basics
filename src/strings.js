@@ -1,3 +1,4 @@
+// All really nice!
 const sayHello = (string) => 'Hello, ' + string + '!'
 
 const uppercase = (string) => string.toUpperCase(string)
